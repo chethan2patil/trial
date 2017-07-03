@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Opt Out</title>
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script>
+$(document).ready(function(){
+
+$('#submit').click(function(){
+
+$.post("unsb.php", $("#mycontactform").serialize(),  function(response) {   
+ $('#success').html(response);
+ //$('#success').hide('slow');
+});
+return false;
+
+
+});
+
+});
+</script>
+
+<style>
+.myButton:hover {
+	background-color:#5cbf2a;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+</style>
+</head>
+
+<body>
+<div id="outerwrap">
+  
+  <div id="wrap"> 
+  <div>    
+    <div  id="outer">
+                          <div id="container"><br />
+                            
+
+                            <p align="center" style="font-family:Georgia, 'Times New Roman', Times, serif;font-size:35px;font-weight:bold;">"OPT OUT"</p>
+                           
+                            <div class="text_bottom_wrap">
+                              <div class="text_bottom">
+                              
+ 
+                         
+ 
+    
+                    <table class="longoptin" style="height: 40px;" cellpadding="0" cellspacing="15" align="center"> 
+                    <tbody> 
+                    <tr valign="center"> 
+                      <td style="width: 500px;"><div align="center">
+                        <p><strong> Email Below </strong></p>
+                      </div>
+                        <form action="" method="post" id="mycontactform">
+<div class="optin_form" style="text-align: center;">
+<input type="text" id="email" name="email"></input>
+<input type="button" name="submit" id="submit" value="OPT Out" class="myButton" ></input>
+
+</div>
+</form></td> 
+                      
+                      </tr></tbody></table>                              
+
+                            <!--**********-->
+      </div>
+    </div>
+</div>
+
+</div>
+</div>
+</body>
+</html>
